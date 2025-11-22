@@ -280,7 +280,7 @@ export const GovernanceView: React.FC = () => {
           }`}
         >
           <Activity className="w-4 h-4" />
-          <span>Model Health</span>
+          <span>Governance Dashboard</span>
         </button>
       </div>
 
