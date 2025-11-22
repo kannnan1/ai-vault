@@ -3,68 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solytics AI Governance Report</title>
+    <title>AI Vault Governance Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              solytics: {
-                50: '#f0f4f8',
-                100: '#d9e2ec',
-                500: '#334e68',
-                800: '#102a43',
-                900: '#061523', // Deep navy
-              },
-              accent: {
-                500: '#00b4d8', // Cyan/Teal accent
-              }
-            }
-          }
-        }
-      }
-    </script>
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
+      body { font-family: 'Inter', sans-serif; }
+      /* Custom Scrollbar for Webkit */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
       }
-      /* Custom scrollbar for better aesthetics */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1; 
       }
-      ::-webkit-scrollbar-track {
-        background: transparent; 
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #c7c7c7; 
+        border-radius: 10px;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1; 
-        border-radius: 4px;
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #a0a0a0; 
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8; 
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
       }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
-  <body>
+  <body class="bg-gray-50">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
